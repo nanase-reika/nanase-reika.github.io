@@ -191,12 +191,16 @@ function home() {
     <div>
       <p class="en">About</p>
       <h2>七瀬玲華</h2>
-      <p>ロマンス作家。王宮の大広間から、閉店間際の喫茶店まで。<br>奪われたものを自分の手で取り戻し、選んだ人の隣で笑う女性たちを書いています。</p>
+      <p>恋の物語を書く物書き。王宮の大広間から、閉店間際の喫茶店まで。<br>奪われたものを自分の手で取り戻し、選んだ人の隣で笑う女性たちを書いています。</p>
       <a class="text-link" href="profile/">プロフィールを読む →</a>
     </div>
   </div>
 </section>
-${site.xUrl ? `<section class="section x-follow"><p>新刊情報と、ロマンスにまつわる小さなコラムをXで毎日お届けしています。</p><a class="btn" href="${site.xUrl}" target="_blank" rel="noopener">Xでフォローする</a></section>` : ""}
+${site.xUrl ? `<section class="section x-follow">
+  ${heading("On X", "毎晩21時、Xで連載中")}
+  <p>『100日後に婚約破棄される令嬢』<br>婚約破棄まで、あと百日。一日一枚の絵と短い物語で、ひと晩ずつ綴っています。<br>新刊のお知らせも、こちらで。</p>
+  <a class="btn" href="${site.xUrl}" target="_blank" rel="noopener">@${site.xUrl.split("/").pop()} をフォロー</a>
+</section>` : ""}
 `,
   });
 }
@@ -274,14 +278,15 @@ function profile() {
   <div class="profile-body">
     <h1>七瀬玲華<span>Reika Nanase</span></h1>
     <p class="role">Romance Novelist</p>
-    <p>ロマンス作家。年齢は、物語の中の時間と同じく、内緒です。</p>
+    <p>恋の物語を書いている物書きです。年齢は、物語の中の時間と同じく、内緒です。</p>
     <p>王宮の大広間で婚約破棄を告げられる令嬢も、四十二歳で離婚届を出した夜に初恋の人と再会する女性も、私にとっては同じひとりのヒロインです。</p>
     <p>奪われた名前、言えなかった言葉、手放しかけた自分の時間。それを誰かに返してもらうのではなく、自分の手で取り戻す。そして、選んだ人の隣で笑う。そんな物語を書いています。</p>
     <p>舞台は、西洋風の王宮、平安の宮廷、大正の浅草、そして今の日本。時代が変わっても、誇りを取り戻す瞬間の美しさは変わらないと信じています。</p>
     <dl class="profile-list">
       <dt>ジャンル</dt><dd>王宮ロマンス／現代ロマンス／ざまぁ・逆転劇／大人の恋愛</dd>
       <dt>作品</dt><dd>Amazon Kindleにて配信中（小説・漫画小説）</dd>
-      <dt>お約束</dt><dd>どの物語も、最後は必ずハッピーエンド</dd>
+      <dt>お約束</dt><dd>どの物語も、最後は必ずハッピーエンド</dd>${site.xUrl ? `
+      <dt>X</dt><dd><a href="${site.xUrl}" target="_blank" rel="noopener">@${site.xUrl.split("/").pop()}</a>（毎晩21時に連載『100日後に婚約破棄される令嬢』を更新中）</dd>` : ""}
     </dl>
     <div class="actions"><a class="btn" href="${p}works/">作品一覧へ</a>${site.xUrl ? `<a class="btn btn-ghost" href="${site.xUrl}" target="_blank" rel="noopener">X（旧Twitter）</a>` : ""}</div>
   </div>
