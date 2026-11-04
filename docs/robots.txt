@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://specter2020.github.io/nanase-reika/sitemap.xml
+Sitemap: https://nanase-reika.github.io/sitemap.xml
